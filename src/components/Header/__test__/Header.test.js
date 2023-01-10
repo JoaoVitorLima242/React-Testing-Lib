@@ -38,3 +38,11 @@ it('Should render the same text passed into title prop using query', async () =>
 
     expect(headingElement).not.toBeInTheDocument()
 })
+
+it('Should render two titles', async () => {
+    render(<Header title='My Header'/>)
+
+    const headingElements = screen.getAllByRole('heading')
+
+    expect(headingElements.length).toBe(2)
+})
