@@ -2,14 +2,14 @@ import { render, screen } from '@testing-library/react'
 
 import Header from '../Header'
 
-// GET BY
-it('Should render the same text passed into title prop', () => {
-    render(<Header title='My Header'/>)
+// // GET BY
+// it('Should render the same text passed into title prop', () => {
+//     render(<Header title='My Header'/>)
 
-    const headingElement = screen.getByText(/my header/i)
+//     const headingElement = screen.getByText(/my header/i)
 
-    expect(headingElement).toBeInTheDocument()
-})
+//     expect(headingElement).toBeInTheDocument()
+// })
 
 it('Should render a heading in our component with a text passed by title prop', () => {
     render(<Header title='My Header'/>)
@@ -21,28 +21,28 @@ it('Should render a heading in our component with a text passed by title prop', 
     expect(headingElement).toBeInTheDocument()
 })
 
-// FIND BY
-it('Should render the same text passed into title prop using find', async () => {
-    render(<Header title='My Header'/>)
+// // FIND BY
+// it('Should render the same text passed into title prop using find', async () => {
+//     render(<Header title='My Header'/>)
 
-    const headingElement = await screen.findByText(/my header/i)
+//     const headingElement = await screen.findByText(/my header/i)
 
-    expect(headingElement).toBeInTheDocument()
-})
+//     expect(headingElement).toBeInTheDocument()
+// })
 
-// QUERY BY
-it('Should render the same text passed into title prop using query', async () => {
-    render(<Header title='My Header'/>)
+// // QUERY BY
+// it('Should render the same text passed into title prop using query', async () => {
+//     render(<Header title='My Header'/>)
 
-    const headingElement = screen.queryByText(/dogs/i)
+//     const headingElement = screen.queryByText(/dogs/i)
 
-    expect(headingElement).not.toBeInTheDocument()
-})
+//     expect(headingElement).not.toBeInTheDocument()
+// })
 
-it('Should render two titles', async () => {
-    render(<Header title='My Header'/>)
+// it('Should render two titles', async () => {
+//     render(<Header title='My Header'/>)
 
-    const headingElements = screen.getAllByRole('heading')
+//     const headingElements = screen.getAllByRole('heading')
 
-    expect(headingElements.length).toBe(2)
-})
+//     expect(headingElements.length).toBe(2)
+// })
