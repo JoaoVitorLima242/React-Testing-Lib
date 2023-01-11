@@ -65,6 +65,8 @@ const mockResponse = {
     }
 }
 
-export default {
+const mockAxios = {
     get: jest.fn().mockResolvedValue(mockResponse)
 }
+
+export default mockAxios
