@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from "@testing-library/react"
+import { render, screen } from "@testing-library/react"
 
 import TodoList from "../TodoList"
 import { BrowserRouter } from "react-router-dom"
