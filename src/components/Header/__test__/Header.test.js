@@ -2,23 +2,18 @@ import { render, screen } from '@testing-library/react'
 
 import Header from '../Header'
 
-// // GET BY
-// it('Should render the same text passed into title prop', () => {
-//     render(<Header title='My Header'/>)
 
-//     const headingElement = screen.getByText(/my header/i)
 
-//     expect(headingElement).toBeInTheDocument()
-// })
-
-it('Should render a heading in our component with a text passed by title prop', () => {
-    render(<Header title='My Header'/>)
-
-    const headingElement = screen.getByRole('heading', {
-        name: 'My Header'
+describe('Header', () => {
+    it('Should render a heading in our component with a text passed by title prop', () => {
+        render(<Header title='My Header'/>)
+    
+        const headingElement = screen.getByRole('heading', {
+            name: 'My Header'
+        })
+    
+        expect(headingElement).toBeInTheDocument()
     })
-
-    expect(headingElement).toBeInTheDocument()
 })
 
 // // FIND BY
